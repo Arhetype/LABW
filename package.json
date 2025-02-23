@@ -1,0 +1,27 @@
+{
+  "name": "labw",
+  "version": "1.0.0",
+  "description": "��#\u0000#\u0000 \u0000 \u00040\u00047\u0004@\u00040\u00041\u0004>\u0004B\u0004G\u00048\u0004:\u0004\r\u0000 \u0000\r\u0000 \u0000*\u0000*\u0000$\u0004\u0018\u0004\u001e\u0004:\u0000*\u0000*\u0000 \u0000 \u0004O\u00041\u0004F\u00045\u00042\u0004 \u0000\u0014\u00040\u0004=\u00048\u00048\u0004;\u0004 \u0000\u001a\u0004>\u0004=\u0004A\u0004B\u00040\u0004=\u0004B\u00048\u0004=\u0004>\u00042\u00048\u0004G\u0004\r\u0000 \u0000*\u0000*\u0000\u0013\u0004@\u0004C\u0004?\u0004?\u00040\u0004:\u0000*\u0000*\u0000 \u0000\u001f\u0004@\u0004\u0018\u0004-\u00002\u00003\u0000",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon backend/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "morgan": "^1.10.0",
+    "pg": "^8.13.3",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.37.5",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
