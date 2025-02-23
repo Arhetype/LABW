@@ -1,5 +1,5 @@
 const { Sequelize, DataTypes } = require('sequelize');
-const { sequelize } = require('../config/db');
+const { sequelize } = require('../config/db'); // Импортируем sequelize
 
 const User = sequelize.define('User', {
     id: {
@@ -28,7 +28,7 @@ const User = sequelize.define('User', {
 // Синхронизация модели с базой данных
 const syncModel = async () => {
     try {
-        await User.sync(); // Создает таблицу, если она не существует
+        await User.sync();
         console.log('Модель "Пользователь" синхронизирована с базой данных.');
     } catch (error) {
         console.error('Ошибка при синхронизации модели "Пользователь":', error);

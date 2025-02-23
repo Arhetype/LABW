@@ -6,6 +6,7 @@ const { syncModel: syncUserModel } = require('./models/User');
 const { syncModel: syncEventModel } = require('./models/Event');
 const eventRoutes = require('./routes/events');
 const userRoutes = require('./routes/users');
+const setupSwagger = require('./swagger');
 
 dotenv.config();
 
@@ -17,6 +18,11 @@ app.use(cors());
 
 const PORT = process.env.PORT || 3000;
 
+setupSwagger(app);
+
+const morgan = require('morgan');
+
+app.use(morgan('[:method] :url :status - :response-time ms'));
 
 sequelize.authenticate()
     .then(() => {

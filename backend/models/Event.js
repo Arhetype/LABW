@@ -38,6 +38,16 @@ const Event = sequelize.define('Event', {
             },
         },
     },
+    category: {
+        type: DataTypes.ENUM('концерт', 'лекция', 'выставка'),
+        allowNull: false,
+        validate: {
+            isIn: {
+                args: [['концерт', 'лекция', 'выставка']],
+                msg: 'Категория мероприятия должна быть одной из: концерт, лекция, выставка.',
+            },
+        },
+    },
     createdBy: {
         type: DataTypes.INTEGER,
         allowNull: false,
@@ -58,7 +68,7 @@ Event.belongsTo(User, { foreignKey: 'createdBy' });
 // Синхронизация модели с базой данных
 const syncModel = async () => {
     try {
-        await Event.sync({ alter: true });
+        await Event.sync({ alter: true }); // Используем alter для безопасного обновления структуры
         console.log('Модель "Мероприятие" синхронизирована с базой данных.');
     } catch (error) {
         console.error('Ошибка при синхронизации модели "Мероприятие":', error);
