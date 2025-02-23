@@ -28,7 +28,7 @@ const User = sequelize.define('User', {
 // Синхронизация модели с базой данных
 const syncModel = async () => {
     try {
-        await User.sync();
+        await User.sync(); // Создает таблицу, если она не существует
         console.log('Модель "Пользователь" синхронизирована с базой данных.');
     } catch (error) {
         console.error('Ошибка при синхронизации модели "Пользователь":', error);

@@ -37,7 +37,6 @@ const syncModels = async () => {
     await syncEventModel();
 };
 
-// Вызов функции синхронизации моделей
 syncModels().then(() => {
     console.log('Все модели синхронизированы с базой данных.');
 }).catch(err => {
